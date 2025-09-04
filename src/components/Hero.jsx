@@ -70,7 +70,7 @@ const AvailableForWork = () => (
 
 const Hero = () => {
   return (
-    <section id="home" className="pt-32 pb-16 md:pt-40 md:pb-24 bg-[#F3F0FF]">
+    <section id="home" className="pt-32 pb-16 md:pt-40 md:pb-24 bg-[#F3F0FF] section-hero">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-left">
@@ -93,7 +93,7 @@ const Hero = () => {
             </p>
             <a
               href="#projects"
-              className="inline-block bg-white text-gray-900 px-8 py-3 rounded-full font-semibold border-2 border-black shadow-[4px_4px_0_0_#000] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+              className="inline-block bg-white text-gray-900 px-8 py-3 rounded-full font-semibold border-2 border-black shadow-[4px_4px_0_0_#000] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-200 btn-gradient"
             >
               See My Works
             </a>

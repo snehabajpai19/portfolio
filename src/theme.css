@@ -1,0 +1,135 @@
+/* Custom theme overrides to give the portfolio a distinct look */
+
+:root {
+  /* Revert to indigo + pink palette */
+  --sb-accent: #4f46e5; /* indigo-600 */
+  --sb-accent-2: #ec4899; /* pink-500 */
+  --sb-ink: #0f172a; /* slate-900 */
+  --sb-border: #111827; /* gray-900 */
+}
+
+/* Soft gradient background for the whole page */
+body {
+  background:
+    radial-gradient(1200px 500px at 10% -10%, rgba(79, 70, 229, 0.10), rgba(79, 70, 229, 0) 60%),
+    radial-gradient(900px 400px at 110% 10%, rgba(236, 72, 153, 0.10), rgba(236, 72, 153, 0) 60%),
+    linear-gradient(180deg, #fafafa 0%, #f4f6ff 100%);
+  color: var(--sb-ink);
+}
+
+/* Gradient section titles */
+section h2 {
+  background: linear-gradient(90deg, var(--sb-ink) 0%, var(--sb-accent) 50%, var(--sb-ink) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Section variants */
+.section-hero {
+  position: relative;
+}
+.section-hero::before {
+  content: "";
+  position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(600px 300px at 10% 20%, rgba(79,70,229,.10), transparent 70%);
+}
+.section-alt {
+  position: relative;
+}
+.section-alt::before {
+  content: "";
+  position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(500px 240px at 80% 20%, rgba(236,72,153,.10), transparent 70%);
+}
+.section-surface { position: relative; }
+.section-surface::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(800px 320px at 10% 10%, rgba(79,70,229,.08), transparent 70%);
+}
+.section-cta { position: relative; }
+.section-cta::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(700px 300px at 90% 20%, rgba(236,72,153,.10), transparent 70%);
+}
+/* CTA heading: use solid color, not gradient text */
+.section-cta h2 {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: border-box !important;
+  color: var(--sb-ink) !important;
+}
+
+/* Gradient primary button */
+.btn-gradient {
+  background-image: linear-gradient(90deg, var(--sb-accent), var(--sb-accent-2));
+  color: white !important;
+  border-color: transparent !important;
+}
+.btn-gradient:hover {
+  filter: brightness(0.95);
+}
+
+/* Sticky header with glass effect */
+header.fixed {
+  background: rgba(255, 255, 255, 0.75) !important;
+  -webkit-backdrop-filter: saturate(140%) blur(10px);
+  backdrop-filter: saturate(140%) blur(10px);
+  border-bottom-color: rgba(17, 24, 39, 0.15) !important;
+  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.12);
+}
+
+/* Navigation link underline animation */
+header nav a {
+  position: relative;
+}
+header nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, var(--sb-accent), var(--sb-accent-2));
+  transition: width 200ms ease;
+}
+header nav a:hover::after {
+  width: 100%;
+}
+
+/* Card look: lighter border + modern shadow */
+.project-card {
+  border-color: rgba(17, 24, 39, 0.9) !important;
+  /* Emerald accent for cards */
+  box-shadow: 0 14px 28px rgba(17, 24, 39, 0.12), 0 10px 10px rgba(16, 185, 129, 0.16) !important;
+}
+.project-card:hover {
+  box-shadow: 0 18px 36px rgba(16, 185, 129, 0.22), 0 12px 12px rgba(17, 24, 39, 0.12) !important;
+}
+
+/* Media area subtle gradient */
+.project-card .bg-\[\#F3F0FF\] {
+  /* Soft emerald tint for card media area */
+  background: linear-gradient(180deg, #ecfff7 0%, #e6fff3 100%);
+}
+
+/* Experience timeline accents */
+.timeline-dot {
+  background: linear-gradient(135deg, var(--sb-accent), var(--sb-accent-2));
+  border: 2px solid var(--sb-border);
+}
+.timeline-line {
+  background: linear-gradient(180deg, rgba(16,185,129,0.2), rgba(79,70,229,0.2));
+}
+
+/* Buttons: stronger focus + subtle glow */
+a[class*="rounded-full"]:focus-visible {
+  outline: 3px solid var(--sb-accent-2);
+  outline-offset: 2px;
+}
+a[class*="rounded-full"] {
+  box-shadow: 0 4px 0 0 #000000, 0 0 0 0 rgba(124, 58, 237, 0.0);
+}
+a[class*="rounded-full"]:hover {
+  box-shadow: 0 0 0 0 #000000, 0 8px 20px rgba(124, 58, 237, 0.25);
+}

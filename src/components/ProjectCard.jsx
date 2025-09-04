@@ -1,5 +1,5 @@
 const ProjectCard = ({ title, description, imageUrl, link }) => (
-  <div className="bg-white rounded-2xl overflow-hidden group border-2 border-black shadow-[8px_8px_0_0_#000] hover:shadow-none hover:translate-x-2 hover:translate-y-2 transition-all duration-300">
+  <div className="project-card bg-white rounded-2xl overflow-hidden group border-2 border-black hover:translate-x-2 hover:translate-y-2 transition-all duration-300">
     <a href={link} target="_blank" rel="noopener noreferrer">
       {/* Fixed-height media area for consistent card sizes */}
       <div className="overflow-hidden bg-[#F3F0FF] border-b-2 border-black">

@@ -20,7 +20,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-16 md:py-24 bg-[#F3F0FF]">
+    <section id="about" className="py-16 md:py-24 bg-[#F3F0FF] section-alt">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div>
@@ -36,7 +36,7 @@ const About = () => {
               href={social.resume || social.linkedin || social.github || "#"}
               target={social.resume || social.linkedin || social.github ? "_blank" : undefined}
               rel={social.resume || social.linkedin || social.github ? "noopener noreferrer" : undefined}
-              className="inline-block bg-white text-gray-900 px-8 py-3 rounded-full font-semibold border-2 border-black shadow-[4px_4px_0_0_#000] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+              className="inline-block bg-white text-gray-900 px-8 py-3 rounded-full font-semibold border-2 border-black shadow-[4px_4px_0_0_#000] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-200 btn-gradient"
             >
               More About Me
             </a>
