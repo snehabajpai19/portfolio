@@ -1,36 +1,50 @@
 import ProjectCard from "./ProjectCard";
+import { projectRepos } from "../data/links";
 
 const Projects = () => {
+  // Images stored in /public
+  const imageMap = {
+    "Ecommerce Management App": "/EcommerceApp.png",
+    "AI Agent using Ollama-Based RAG": "/Document%20Analyzer%20Chatbot.png",
+    "Banking Application using DAO (Java)": "/BankApp.png",
+    "Employee Management System (Servlets)": "/Employee%20Management%20System.png",
+  };
+
   const projects = [
     {
-      title: "PeerLance – Campus Freelance Task App",
+      title: "Ecommerce Management App",
       description:
-        "A full-stack freelancing platform where college students can post and take up campus-based tasks like printing, presentations, and notebook writing. Built with React, Node.js, Express, and MongoDB.",
-      imageUrl: "/peerlance-demo.png",
-      link: "https://github.com/Shivam-Gupta-Github/peerlance",
+        "Production‑style store built with Flask where admins, vendors and couriers work from separate dashboards. Orders, inventory and fulfillment are backed by a well‑designed MariaDB schema with clean APIs and a responsive UI.",
     },
     {
-      title: "Inter-Code – Real-Time Code Collaboration",
+      title: "AI Agent using Ollama-Based RAG",
       description:
-        "A real-time collaborative code editor for technical interviews and mock sessions. Built with React.js, Node.js, Express, and Socket.io for live code syncing between users.",
-      imageUrl: "/inter-code-demo.png",
-      link: "https://github.com/Shivam-Gupta-Github/inter-code",
+        "Document‑aware assistant that ingests PDFs/images, embeds them in ChromaDB and answers questions using a local LLaMA model via Ollama. A custom retrieval chain with prompt guards delivers concise, cited responses.",
     },
     {
-      title: "Contest Kitty – Coding Contest Discord Bot",
+      title: "Banking Application using DAO (Java)",
       description:
-        "A Discord bot that fetches upcoming contests from Codeforces and LeetCode. Includes contest comparison among users and custom commands using Discord.js and REST APIs.",
-      imageUrl: "/contest-kitty-demo.png",
-      link: "https://github.com/Shivam-Gupta-Github/contest-kitty",
+        "Java + JDBC project that models real banking flows: account lifecycle, deposits, withdrawals and transfers with validation and transactional safety. The DAO layer isolates Oracle queries for clean, testable business logic.",
     },
-  ];
+    {
+      title: "Employee Management System (Servlets)",
+      description:
+        "Classic Java Servlets application for managing employees and departments with auth, pagination and search. Server‑rendered views talk to JDBC endpoints for reliable CRUD and clear separation between controller and data layers.",
+    },
+  ].map((p) => ({
+    ...p,
+    imageUrl:
+      imageMap[p.title] ??
+      "https://placehold.co/600x400/f3f0ff/111111?text=Project+Image",
+    link: projectRepos[p.title] ?? "#",
+  }));
 
   return (
     <section id="projects" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-            Take a look at my latest projects with creative ideas.
+            Projects I've built recently.
           </h2>
         </div>
         <div className="grid md:grid-cols-2 gap-12">

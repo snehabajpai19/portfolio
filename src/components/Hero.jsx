@@ -78,18 +78,18 @@ const Hero = () => {
               • HELLO!
             </span>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              I'm Shivam Gupta,
+              I'm Sneha Bajpai,
               <br />
               <span className="inline-block relative">
-                an engineering student.
+                a CS undergrad & full‑stack/AI developer.
                 <div className="absolute -bottom-3 left-0 w-full px-2">
                   <SquiggleUnderline />
                 </div>
               </span>
             </h1>
             <p className="text-lg text-gray-600 max-w-lg mb-8">
-              I'm currently exploring opportunities to apply my skills in
-              real-world projects and contribute to impactful teams.
+              Final-year B.Tech student (CSE, 2022–2026). I build full‑stack web apps
+              and AI/RAG agents. Open to internships and full‑time roles.
             </p>
             <a
               href="#projects"
@@ -104,7 +104,7 @@ const Hero = () => {
               <div className="absolute border-2 border-black inset-0 rounded-t-[200px] rounded-b-[20px] overflow-hidden">
                 <img
                   src="/profile.png"
-                  alt="Shivam Gupta"
+                  alt="Sneha Bajpai"
                   className="w-full h-full object-cover"
                   // This placeholder will show if your image fails to load.
                   onError={(e) => {

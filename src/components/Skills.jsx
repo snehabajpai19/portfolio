@@ -4,28 +4,28 @@ import { Code2, Layout, Server, Database } from "lucide-react";
 const Skills = () => {
   const skills = [
     {
-      icon: <Code2 className="text-green-500" size={32} strokeWidth={2} />,
-      title: "Competitive Programming",
-      description:
-        "Solved 750+ problems on LeetCode and CodeChef. Strong grasp of data structures and algorithms with a Knight rating (1960+) on LeetCode.",
-    },
-    {
       icon: <Layout className="text-purple-500" size={32} strokeWidth={2} />,
-      title: "Frontend Development",
+      title: "Full‑Stack Development",
       description:
-        "Experienced with React, HTML, CSS, Tailwind, and responsive UI design. Focused on building fast, accessible, and clean user interfaces.",
+        "Flask, Django, MERN, HTML, CSS, JS, Bootstrap. Build responsive UIs and robust backends.",
     },
     {
       icon: <Server className="text-blue-500" size={32} strokeWidth={2} />,
-      title: "Backend Development",
+      title: "AI/ML & RAG",
       description:
-        "Skilled in Node.js and Express.js. Built REST APIs, handled authentication, and implemented real-time features using Socket.io.",
+        "LangChain, RAG, Generative AI, NumPy, Pandas; Ollama‑based agents with OCR for PDFs/images.",
     },
     {
       icon: <Database className="text-yellow-500" size={32} strokeWidth={2} />,
-      title: "Databases",
+      title: "Databases & SQL",
       description:
-        "Worked with MongoDB and SQL for building scalable, efficient, and secure data layers in full-stack applications.",
+        "Oracle, MySQL/MariaDB, MongoDB; optimized schemas, JDBC integrations, and SQL performance.",
+    },
+    {
+      icon: <Code2 className="text-green-500" size={32} strokeWidth={2} />,
+      title: "Problem‑Solving",
+      description:
+        "200+ problems; strong DS & Algorithms. Interests: Networking, OOPS, DBMS.",
     },
   ];
 
@@ -34,7 +34,7 @@ const Skills = () => {
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-            Skills that power my development.
+            Technical skills I work with.
           </h2>
         </div>
         <div className="grid sm:grid-cols-2 gap-10">

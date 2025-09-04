@@ -6,6 +6,7 @@ import CTA from "./components/CTA";
 import Footer from "./components/Footer";
 import Skills from "./components/Skills";
 import Achievements from "./components/Achievements";
+import Education from "./components/Education";
 import PageLoader from "./components/PageLoader";
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
         <Skills />
         <About />
         <Projects />
+        <Education />
         <Achievements />
         <CTA />
       </main>

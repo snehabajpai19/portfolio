@@ -1,27 +1,21 @@
 import ExperienceItem from "./ExperienceItem";
+import { social } from "../data/links";
 
 const About = () => {
   const experiences = [
     {
-      date: "2025-Present",
-      title: "Full-Stack Developer",
-      company: "PeerLance (Campus Freelance App)",
+      date: "Jan 2025 – Dec 2025",
+      title: "Full‑Stack Developer — Internship",
+      company: "IIT Kanpur (Prof. B.M. Shukla, HOD CSE)",
       description:
-        "Created a MERN stack web app where students can post and complete campus-based freelance tasks. Integrated features like task creation, assignment flow, and user authentication.",
+        "Built and deployed a full‑featured e‑commerce dashboard with 20+ SQL tables, integrating frontend and backend modules for seamless data flow.",
     },
     {
-      date: "2024",
-      title: "React Developer",
-      company: "Inter-Code (Real-Time Code Editor)",
+      date: "Dec 2024 – Mar 2025",
+      title: "AI/ML Developer — Internship",
+      company: "IIT Kanpur (Prof. Nawpreet Singh)",
       description:
-        "Developed a real-time collaborative code editor using React, Node.js, Express, and Socket.io. Designed for mock interviews and team coding sessions.",
-    },
-    {
-      date: "2023",
-      title: "Open Source Developer",
-      company: "Contest Kitty (Discord Bot)",
-      description:
-        "Built a feature-rich Discord bot using Python and Discord.js to track competitive programming contests and user performance on platforms like LeetCode and Codeforces.",
+        "Designed a scalable RAG chatbot with document upload and dynamic querying using Ollama & LangChain.",
     },
   ];
 
@@ -34,12 +28,14 @@ const About = () => {
               My experiences
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              I've built real-time apps, bots, and full-stack platforms during
-              my learning journey. I'm actively looking for a full-time role in
-              a product-based company where I can grow and contribute.
+              I love building practical systems: full‑stack apps, RAG agents,
+              and data‑driven dashboards. I'm seeking roles where I can learn,
+              contribute, and ship impactful software.
             </p>
             <a
-              href="#"
+              href={social.resume || social.linkedin || social.github || "#"}
+              target={social.resume || social.linkedin || social.github ? "_blank" : undefined}
+              rel={social.resume || social.linkedin || social.github ? "noopener noreferrer" : undefined}
               className="inline-block bg-white text-gray-900 px-8 py-3 rounded-full font-semibold border-2 border-black shadow-[4px_4px_0_0_#000] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
             >
               More About Me

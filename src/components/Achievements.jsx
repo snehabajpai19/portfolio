@@ -4,27 +4,27 @@ import { Trophy, Award, Brain, BadgeCheck } from "lucide-react";
 const achievements = [
   {
     icon: <Trophy className="text-yellow-500" size={32} strokeWidth={2} />,
-    title: "Knight on LeetCode",
+    title: "LeetCode Top 20% (1600+)",
     description:
-      "Achieved a LeetCode rating of 1960+ and solved 750+ problems.",
+      "Solved 200+ problems; consistent problem‑solving and DSA practice.",
   },
   {
     icon: <Award className="text-blue-500" size={32} strokeWidth={2} />,
-    title: "Global Rank 1454 - CodeVita",
+    title: "AWS Cloud – Hands‑on",
     description:
-      "Ranked 1454 out of 537,000+ participants in TCS CodeVita Season 12.",
+      "Built with AWS services (deployment, storage, database) in projects.",
   },
   {
     icon: <Brain className="text-purple-500" size={32} strokeWidth={2} />,
-    title: "Machine Learning with Python",
+    title: "Machine Learning with Python – freeCodeCamp",
     description:
-      "Completed Coursera Specialization covering supervised and unsupervised ML using Python.",
+      "Covered supervised/unsupervised learning and practical Python stacks.",
   },
   {
     icon: <BadgeCheck className="text-green-500" size={32} strokeWidth={2} />,
-    title: "Web Development Bootcamp",
+    title: "Certifications",
     description:
-      "Completed The Complete 2024 Web Development Bootcamp by Udemy, mastering HTML, CSS, JS, and Node.",
+      "AWS Cloud Practitioner Essentials, Git & GitHub (Le Wagon), AI Agents (HuggingFace).",
   },
 ];
 

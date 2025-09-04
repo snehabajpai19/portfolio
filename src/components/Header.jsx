@@ -1,4 +1,5 @@
 import { Menu, X, Github, Linkedin, Instagram } from "lucide-react";
+import { social } from "../data/links";
 import { useState } from "react";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,6 +8,7 @@ const Header = () => {
     "Skills",
     "About",
     "Projects",
+    "Education",
     "Achievements",
     "Contact",
   ];
@@ -19,7 +21,7 @@ const Header = () => {
             href="#home"
             className="text-2xl font-bold text-gray-900 tracking-wider"
           >
-            Shivam
+            Sneha
           </a>
           <nav className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link) => (
@@ -34,23 +36,31 @@ const Header = () => {
           </nav>
           <div className="hidden lg:flex items-center space-x-0">
             <a
-              href="https://github.com/Shivam-Gupta-Github"
+              href={social.github || "#"}
+              target={social.github ? "_blank" : undefined}
+              rel={social.github ? "noopener noreferrer" : undefined}
               className="inline-flex items-center justify-center p-3 bg-white text-black rounded-xl border-2 border-black shadow-[5px_5px_0_0_#dadaff] transition-all duration-200 hover:translate-x-[5px] hover:translate-y-[5px] hover:shadow-none"
             >
               <Github size={18} />
             </a>
             <a
-              href="https://www.linkedin.com/in/cse-shivam-gupta/"
+              href={social.linkedin || "#"}
+              target={social.linkedin ? "_blank" : undefined}
+              rel={social.linkedin ? "noopener noreferrer" : undefined}
               className="inline-flex ml-3 items-center justify-center p-3 bg-white text-black rounded-xl border-2 border-black shadow-[5px_5px_0_0_#dadaff] transition-all duration-200 hover:translate-x-[5px] hover:translate-y-[5px] hover:shadow-none"
             >
               <Linkedin size={18} />
             </a>
-            <a
-              href="https://www.instagram.com/shivamgupta35967/"
-              className="inline-flex ml-3 items-center justify-center p-3 bg-white text-black rounded-xl border-2 border-black shadow-[5px_5px_0_0_#dadaff] transition-all duration-200 hover:translate-x-[5px] hover:translate-y-[5px] hover:shadow-none"
-            >
-              <Instagram size={18} />
-            </a>
+            {social.instagram && (
+              <a
+                href={social.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex ml-3 items-center justify-center p-3 bg-white text-black rounded-xl border-2 border-black shadow-[5px_5px_0_0_#dadaff] transition-all duration-200 hover:translate-x-[5px] hover:translate-y-[5px] hover:shadow-none"
+              >
+                <Instagram size={18} />
+              </a>
+            )}
           </div>
           <div className="lg:hidden">
             <button
